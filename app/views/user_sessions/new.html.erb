@@ -1,0 +1,19 @@
+<%= form_with url: login_path, method: :post do |f| %>
+  <div>
+    <%= f.label :email, "email" %><br>
+    <%= f.email_field :email %>
+  </div>
+  <div>
+    <%= f.label :password, "password" %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit "ログイン" %><br>
+  </div>
+<% end %>
+<div>
+  <%= link_to "forgot_password", "#" %>
+</div>
+<div>
+    <%= link_to "signup", new_user_path %>
+</div>
