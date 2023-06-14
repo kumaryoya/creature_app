@@ -1,27 +1,27 @@
 <%= form_for(@user, url: users_path, method: :post) do |f| %>
   <div>
-    <%= f.label :name, "name" %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name, "name", class: "bg-warning" %><br>
+    <%= f.text_field :name, class: "textarea textarea-warning textarea-xs w-full max-w-xs" %>
   </div>
   <div>
-    <%= f.label :email, "email" %><br>
-    <%= f.email_field :email %>
+    <%= f.label :email, "email", class: "bg-primary" %><br>
+    <%= f.email_field :email, class: "textarea textarea-primary textarea-xs w-full max-w-xs" %>
   </div>
   <div>
-    <%= f.label :password, "password" %><br>
-    <%= f.password_field :password %>
+    <%= f.label :password, "password", class: "bg-secondary" %><br>
+    <%= f.password_field :password, class: "textarea textarea-secondary textarea-xs w-full max-w-xs" %>
   </div>
   <div>
-    <%= f.label :password_confirmation, "password_confirmation" %><br>
-    <%= f.password_field :password_confirmation %>
+    <%= f.label :password_confirmation, "password_confirmation", class: "bg-success" %><br>
+    <%= f.password_field :password_confirmation, class: "textarea textarea-success textarea-xs w-full max-w-xs" %>
   </div>
   <div>
-    <%= f.submit "signup" %><br>
+    <%= f.submit "signup", class: "btn btn-accent" %><br>
   </div>
 <% end %>
 <div>
-  <%= link_to "forgot_password", "#" %>
+  <%= link_to "forgot_password", "#", class: "btn btn-active btn-link" %>
 </div>
 <div>
-  <%= link_to "Login", login_path %>
+  <%= link_to "Login", login_path, class: "btn btn-active btn-link" %>
 </div>
