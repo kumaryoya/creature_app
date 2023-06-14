@@ -1,0 +1,27 @@
+<%= form_for(@user, url: users_path, method: :post) do |f| %>
+  <div>
+    <%= f.label :name, "name" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div>
+    <%= f.label :email, "email" %><br>
+    <%= f.email_field :email %>
+  </div>
+  <div>
+    <%= f.label :password, "password" %><br>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.label :password_confirmation, "password_confirmation" %><br>
+    <%= f.password_field :password_confirmation %>
+  </div>
+  <div>
+    <%= f.submit "signup" %><br>
+  </div>
+<% end %>
+<div>
+  <%= link_to "forgot_password", "#" %>
+</div>
+<div>
+  <%= link_to "Login", login_path %>
+</div>
